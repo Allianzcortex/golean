@@ -44,11 +44,11 @@ func readConfig() {
 }
 
 func generatenewImage(files []File) {
-	fmt.Printf("共有 %d 个图片需要处理\n", len(files))
+	fmt.Printf("There are  %d pictures that will need to be processed\n", len(files))
 
-	// 首先建立一个空白图形保证可以存储所有图片
+	// Build a white picture to store all parts
 	// draw.Draw(dst, r, src, sp, op)
-	// 先计算长度，再计算宽度
+	// calculate length first , then width
 	AllWidth := (*(files[0]).name).Bounds().Dx()
 	height := (*(files[0]).name).Bounds().Dy()
 	AllHeight := height * len(files)
@@ -60,10 +60,10 @@ func generatenewImage(files []File) {
 	var tempRectangle image.Rectangle
 	for index := 0; index < len(files); index++ {
 		sp := image.Point{0, height * index}
-		/** 第一个加入图片的初始坐标为 (0,0)
-			第二个加入图片的坐标为 (0,第一个图片的 weight)
-			依此类推
-			坐标系参考：https://blog.golang.org/go-imagedraw-package
+		/**
+			The coordinate of first picture is (0,0)
+			The second picture will be (0, weight of width)
+			refer : https://blog.golang.org/go-imagedraw-package
 		**/
 		tempRectangle = image.Rectangle{sp, sp.Add((*files[index].name).Bounds().Size())}
 		draw.Draw(rgba, tempRectangle, *files[index].name,
@@ -160,5 +160,5 @@ func main() {
 
 	generatenewImage(s)
 
-	fmt.Println("截图已经输出完成")
+	fmt.Println("the joint picture is generated")
 }

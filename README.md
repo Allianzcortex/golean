@@ -1,24 +1,21 @@
 # golean
 
-#### 这是什么 ?
+#### what is this ?
 
-一个将视频截图综合在一起只保留字幕的程序
+A program that combines video screenshots with only subtitles. And you can set screen caption height
 
-支持自定义截屏字幕的高度
+#### Instructions
 
-#### 使用方法
-
-
-下载 bin 目录中的文件，提前编辑好配置文件，在 `config.toml` 中设置选项，之后执行`./process_image`(Linux) 或者 `./process_image.exe`(Windows)
+Download the files in the bin directory, edit the configuration files in advance, set the options in `config.toml`, and then execute `./process_image` (Linux) or `./process_image.exe` (Windows)
 
 
 #### To Do
 
-- [x] 实现 jpeg 格式的说明
-- [ ] 增加对 png/bmp 格式的支持
-- [ ] 基于自制框架提供更方便的 Web UI
-- [ ] 提供命令行选项
+- [x] Description of the implementation of jpeg format
+- [ ] Added support for png/bmp format
+- [ ] Provides a more convenient Web UI based on a self-made framework
+- [ ] Provide command line options
 
 ---
 
-![show](output.JPG)
+![show](output.jpg)
