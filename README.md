@@ -18,4 +18,4 @@ Download the files in the bin directory, edit the configuration files in advance
 
 ---
 
-![show](output.jpg)
+![show](result.jpg)
